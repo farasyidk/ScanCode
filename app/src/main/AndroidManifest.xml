@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ScanActivity"
+            android:name=".AddActivity"
             android:hardwareAccelerated="true" >
 
         </activity>
