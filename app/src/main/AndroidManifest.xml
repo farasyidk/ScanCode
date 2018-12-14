@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="rasyidk.fa.scancode">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.hardware.camera" />
     <uses-permission android:name="android.hardware.camera.autofocus" />
@@ -24,6 +25,11 @@
         </activity>
         <activity
             android:name=".AddActivity"
+            android:hardwareAccelerated="true" >
+
+        </activity>
+        <activity
+            android:name=".LoginActivity"
             android:hardwareAccelerated="true" >
 
         </activity>
