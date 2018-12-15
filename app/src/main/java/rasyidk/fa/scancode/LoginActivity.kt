@@ -50,7 +50,9 @@ class LoginActivity : AppCompatActivity() {
                                     if (jsonResult.getString("error").isEmpty()) {
                                         val key = jsonResult.getString("token")
                                         val nama = jsonResult.getString("username")
-                                        session.createUserLoginSession(key, nama)
+                                        val id = jsonResult.getString("id_user")
+                                        Log.d("loginn", "cetak $key $nama $id")
+                                        session.createUserLoginSession(key, nama, id)
                                         startActivity<MainActivity>()
                                         finish()
                                     } else {

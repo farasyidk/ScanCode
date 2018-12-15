@@ -2,10 +2,17 @@ package rasyidk.fa.scancode
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
+import io.reactivex.android.schedulers.AndroidSchedulers
+import io.reactivex.schedulers.Schedulers
 import org.jetbrains.anko.startActivity
 import rasyidk.fa.scancode.helper.UserSession
+import rasyidk.fa.scancode.model.UserResponse
+import rasyidk.fa.scancode.model.Users
+import rasyidk.fa.scancode.network.NetworkApi
+import rasyidk.fa.scancode.network.NetworkInterface
 
 
 class MainActivity : AppCompatActivity() {

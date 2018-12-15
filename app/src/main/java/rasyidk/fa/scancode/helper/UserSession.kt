@@ -16,6 +16,7 @@ class UserSession {
     private val IS_USER_LOGIN = "IsUserLoggedIn"
     private val KEY_NAME = "Name"
     private val KEY_TOKEN = "token"
+    private val KEY_ID = "id_user"
 
     constructor(context: Context) {
         this.context = context
@@ -24,11 +25,12 @@ class UserSession {
     }
 
 
-    fun createUserLoginSession(token: String, nama: String) {
+    fun createUserLoginSession(token: String, nama: String, id: String) {
         editor.putBoolean(IS_USER_LOGIN, true)
 
         editor.putString(KEY_TOKEN, token)
         editor.putString(KEY_NAME, nama)
+        editor.putString(KEY_ID, id)
 
         editor.commit()
     }
@@ -71,6 +73,8 @@ class UserSession {
         user[KEY_NAME] = pref.getString(KEY_NAME, null)
 
         user[KEY_TOKEN] = pref.getString(KEY_TOKEN, null)
+        user[KEY_ID] = pref.getString(KEY_ID, null)
+
 
         return user
     }
